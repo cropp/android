@@ -369,3 +369,6 @@ playStorePublishServiceCredentialsFile.json
 
 ## Temp results from the CI
 merged_results.sarif
+
+## Local machine-specific Gradle overrides
+gradle.properties.local

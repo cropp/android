@@ -186,6 +186,15 @@
             android:summary="@string/manage_shortcuts_summary" />
     </PreferenceCategory>
     <PreferenceCategory
+        android:key="phone_automations_category"
+        android:title="@string/phone_automations">
+        <Preference
+            android:key="phone_automations"
+            android:icon="@drawable/ic_flash_on_24dp"
+            android:title="@string/phone_automations"
+            android:summary="@string/phone_automations_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory
         android:key="widgets"
         android:title="@string/widgets">
         <Preference

@@ -31,6 +31,7 @@ import io.homeassistant.companion.android.common.util.isAutomotive
 import io.homeassistant.companion.android.database.sensor.SensorDao
 import io.homeassistant.companion.android.database.settings.SensorUpdateFrequencySetting
 import io.homeassistant.companion.android.database.settings.SettingsDao
+import io.homeassistant.companion.android.phoneautomation.PhoneAutomationReceiver
 import io.homeassistant.companion.android.sensors.SensorReceiver
 import io.homeassistant.companion.android.settings.language.LanguagesManager
 import io.homeassistant.companion.android.themes.NightModeManager
@@ -339,6 +340,18 @@ open class HomeAssistantApplication :
             sensorReceiver,
             IntentFilter(Intent.ACTION_CONFIGURATION_CHANGED),
             ContextCompat.RECEIVER_EXPORTED,
+        )
+
+        // Register phone automation receiver for events that cannot be received by static receivers (API 26+)
+        ContextCompat.registerReceiver(
+            this,
+            PhoneAutomationReceiver(),
+            IntentFilter().apply {
+                addAction(Intent.ACTION_SCREEN_ON)
+                addAction(Intent.ACTION_SCREEN_OFF)
+                addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION)
+            },
+            ContextCompat.RECEIVER_NOT_EXPORTED,
         )
 
         if (!isAutomotive()) {

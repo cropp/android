@@ -11,6 +11,7 @@ import io.homeassistant.companion.android.database.authentication.Authentication
 import io.homeassistant.companion.android.database.location.LocationHistoryDao
 import io.homeassistant.companion.android.database.migration.migrationPath
 import io.homeassistant.companion.android.database.notification.NotificationDao
+import io.homeassistant.companion.android.database.phoneautomation.PhoneAutomationDao
 import io.homeassistant.companion.android.database.qs.TileDao
 import io.homeassistant.companion.android.database.sensor.SensorDao
 import io.homeassistant.companion.android.database.server.ServerDao
@@ -97,4 +98,8 @@ internal object DatabaseModule {
     @Provides
     fun provideEntityStateComplicationsDao(database: AppDatabase): EntityStateComplicationsDao =
         database.entityStateComplicationsDao()
+
+    @Provides
+    fun providePhoneAutomationDao(database: AppDatabase): PhoneAutomationDao =
+        database.phoneAutomationDao()
 }

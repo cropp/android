@@ -373,6 +373,19 @@
             </intent-filter>
         </receiver>
 
+        <!-- Phone Automations: listens for charging and battery events which cannot be registered dynamically -->
+        <receiver
+            android:name=".phoneautomation.PhoneAutomationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+            </intent-filter>
+        </receiver>
+
         <activity android:name=".launch.link.LinkActivity"
             android:exported="true"
             android:launchMode="singleTask">

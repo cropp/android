@@ -1491,4 +1491,51 @@
     <string name="fail_to_navigate_to_uri">No app available to open %s</string>
     <string name="experimental">Experimental</string>
     <string name="learn_more">Learn more</string>
+
+    <!-- Phone Automations feature -->
+    <string name="phone_automations">Phone Automations</string>
+    <string name="phone_automations_summary">Create on-device automation rules that react to phone events and trigger Home Assistant actions</string>
+    <string name="phone_automations_empty">No automations yet. Tap + to create one.</string>
+    <string name="phone_automation_add">Add automation</string>
+    <string name="phone_automation_edit">Edit automation</string>
+    <string name="phone_automation_delete">Delete automation</string>
+    <string name="phone_automation_name">Name</string>
+    <string name="phone_automation_enabled">Enabled</string>
+    <string name="phone_automation_save">Save</string>
+    <string name="phone_automation_trigger_section">When (trigger)</string>
+    <string name="phone_automation_action_section">Then (action)</string>
+    <string name="phone_automation_trigger">Trigger</string>
+    <string name="phone_automation_trigger_label">Trigger: %s</string>
+    <string name="phone_automation_action_label">Action: %s</string>
+    <!-- Trigger types -->
+    <string name="phone_automation_trigger_screen_on">Screen turned on</string>
+    <string name="phone_automation_trigger_screen_off">Screen turned off</string>
+    <string name="phone_automation_trigger_charging_started">Charging started</string>
+    <string name="phone_automation_trigger_charging_stopped">Charging stopped</string>
+    <string name="phone_automation_trigger_wifi_connected">Wi-Fi connected</string>
+    <string name="phone_automation_trigger_wifi_connected_ssid">Wi-Fi connected (%s)</string>
+    <string name="phone_automation_trigger_wifi_disconnected">Wi-Fi disconnected</string>
+    <string name="phone_automation_trigger_battery_level">Battery level</string>
+    <string name="phone_automation_trigger_battery_below">Battery below %d%%</string>
+    <string name="phone_automation_trigger_battery_above">Battery above %d%%</string>
+    <string name="phone_automation_trigger_battery_threshold">Battery threshold (%%)</string>
+    <string name="phone_automation_trigger_battery_below_toggle">Trigger when below threshold</string>
+    <string name="phone_automation_trigger_wifi_ssid">Wi-Fi network name (SSID)</string>
+    <string name="phone_automation_trigger_wifi_ssid_hint">Leave empty to match any network</string>
+    <string name="phone_automation_trigger_app_launched">App launched: %s</string>
+    <string name="phone_automation_trigger_app_launched_base">App launched</string>
+    <string name="phone_automation_trigger_app_package">App package name</string>
+    <!-- Action types -->
+    <string name="phone_automation_action_type">Action type</string>
+    <string name="phone_automation_action_type_call_service">Call service</string>
+    <string name="phone_automation_action_type_fire_event">Fire event</string>
+    <string name="phone_automation_action_call_service">Call %s.%s</string>
+    <string name="phone_automation_action_fire_event">Fire event: %s</string>
+    <string name="phone_automation_action_server">Server</string>
+    <string name="phone_automation_action_domain">Service domain</string>
+    <string name="phone_automation_action_service">Service name</string>
+    <string name="phone_automation_action_entity_id">Entity ID (optional)</string>
+    <string name="phone_automation_action_service_data">Service data JSON (optional)</string>
+    <string name="phone_automation_action_event_type">Event type</string>
+    <string name="phone_automation_action_event_data">Event data JSON (optional)</string>
 </resources>

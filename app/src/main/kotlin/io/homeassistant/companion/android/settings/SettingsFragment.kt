@@ -48,6 +48,7 @@ import io.homeassistant.companion.android.settings.qs.ManageTilesFragment
 import io.homeassistant.companion.android.settings.sensor.SensorSettingsFragment
 import io.homeassistant.companion.android.settings.sensor.SensorUpdateFrequencyFragment
 import io.homeassistant.companion.android.settings.server.ServerSettingsFragment
+import io.homeassistant.companion.android.settings.phoneautomation.PhoneAutomationsFragment
 import io.homeassistant.companion.android.settings.shortcuts.ManageShortcutsSettingsFragment
 import io.homeassistant.companion.android.settings.vehicle.ManageAndroidAutoSettingsFragment
 import io.homeassistant.companion.android.settings.wear.SettingsWearActivity
@@ -220,6 +221,14 @@ class SettingsFragment(
                     }
                     return@setOnPreferenceClickListener true
                 }
+            }
+
+            findPreference<Preference>("phone_automations")?.setOnPreferenceClickListener {
+                parentFragmentManager.commit {
+                    replace(R.id.content, PhoneAutomationsFragment::class.java, null)
+                    addToBackStack(getString(commonR.string.phone_automations))
+                }
+                return@setOnPreferenceClickListener true
             }
 
             if (SdkVersion.isAtLeast(Build.VERSION_CODES.N)) {
